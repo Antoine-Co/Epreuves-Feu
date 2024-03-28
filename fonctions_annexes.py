@@ -79,7 +79,7 @@ def is_args_all_alpha(arguments):
 ########### For single value ###########
 #Check if a string value is a positive or negative number
 def is_num(argument):
-    if (not (argument.startswith("-") and argument[1:].isnumeric()) and not argument.isnumeric()): #Only positive numbers
+    if (not argument.isnumeric() and not (argument.startswith("-") and argument[1:].isnumeric()) ):
         return False
     else:
         return True
