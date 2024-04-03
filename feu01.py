@@ -180,13 +180,18 @@ def eval_rpn(rpn_expr):
     
     return stack[0]
 
+########## FINAL STAGE ##########
 #Get the arithmetical expression 
 string_expression = arguments[0]
+
 #Dividing the expression by token 
 tokens = lexer(string_expression)
+
 #Transform the arithmetic expr in Reverse Polish Notation
 rpn_notation = shunting_yard(tokens)
+
 #Apply the resolution of a postfix notation 
 result = eval_rpn(rpn_notation)
+
 #Display the result
 print(result)
